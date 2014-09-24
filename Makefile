@@ -2,7 +2,7 @@ USB_PATH=/Volumes/KINGSTON
 
 all: robot.zip
 
-robot.zip:
+robot.zip: src/robot.py
 	pyenv/make-zip --no-strip src "$@"
 
 copy-macosx: robot.zip

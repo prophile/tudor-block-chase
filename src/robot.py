@@ -56,10 +56,10 @@ def can_see_block():
 #    return search_count % 5 == 0
 
 def state_search():
-    rotate(40)
+    rotate(30)
     time.sleep(0.4)
     stop()
-    time.sleep(0.3)
+    time.sleep(0.8)
     return state_advance if can_see_block() else state_search
 
 def state_advance():
@@ -73,8 +73,8 @@ def state_backoff():
     reverse(20)
     time.sleep(2)
     stop()
-    rotate(-80)
-    time.sleep(4)
+    rotate(-50)
+    time.sleep(2)
     stop()
     return state_search
 

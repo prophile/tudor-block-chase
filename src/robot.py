@@ -48,12 +48,12 @@ def can_see_block():
     return any(marker.info.marker_type in ACCEPTABLE_MARKER_TYPES
                 for marker in R.see())
 
-# FIXME: debug while we don't have a marker
-search_count = 0
-def can_see_block():
-    global search_count
-    search_count += 1
-    return search_count % 5 == 0
+## FIXME: debug while we don't have a marker
+#search_count = 0
+#def can_see_block():
+#    global search_count
+#    search_count += 1
+#    return search_count % 5 == 0
 
 def state_search():
     rotate(40)
